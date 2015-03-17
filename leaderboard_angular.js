@@ -55,19 +55,6 @@ io.sockets.on('connection', function (socket) {
 		var id = data.user_id;
 		<!-- update item from db -->
 		db.collection('users', function(err, collection) {
-			// collection.update({'_id':new BSON.ObjectID(id)}, {$inc:{rate : 3}} , {safe:true}, function(err, result) {
-			// 	if (err) {
-			// 		//res.send({'error':'An error has occurred'});
-			// 			console.log(err);
-			// 	} else {
-			// 		//console.log('' + result + ' document(s) updated');					
-			// 		 collection.find().toArray(function(err, items) {
-			// 			//console.log(items);
-			// 			socket.broadcast.emit('update',{items : items});
-			// 			socket.emit('update',{items : items});
-			// 		});				
-			// 	}
-			// });
 		});
 	});
 	socket.on('new',function(data){

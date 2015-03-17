@@ -33,7 +33,7 @@ ul li{
 div.img{
 	width:24px;
 	height:auto;
-	background:url("") no-repeat;
+	background:url("/images/fav.png") no-repeat;
 	z-index:1000;	
 	cursor:pointer;
 }
