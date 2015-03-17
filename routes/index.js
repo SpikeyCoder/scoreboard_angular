@@ -14,7 +14,7 @@ var server = new Server('localhost', 27017, {auto_reconnect: true});
 //var io = require('socket.io').listen(server, { log: false });
 
 // create cartdb Database
-db = new Db('luvs', server);
+db = new Db('Security_Hackathon_Team_Scores', server);
 
 // open database 
 db.open(function(err, db) {
@@ -68,23 +68,23 @@ var populateDB = function() {
  
     var user = [
     {
-		name: "A", 
+		name: "Team Grunts", 
 		rate: 0	
 	},
     {
-		name: "B", 
+		name: "Team HackyQuacky", 
 		rate: 0	
 	},
     {
-		name: "C", 
+		name: "Team GeekSquad", 
 		rate: 0	
 	},
     {
-		name: "D", 
+		name: "Team Minecraft", 
 		rate: 0	
 	},
     {
-		name: "E", 
+		name: "Team InfoSec", 
 		rate: 0	
 	}
 	];

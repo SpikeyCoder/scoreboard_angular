@@ -27,18 +27,13 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD:leaderboard_angular.js
-<<<<<<< HEAD:leaderboard_angular.js
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "X-Requested-With");
 	next();
 
 });
-=======
->>>>>>> parent of 0672461... Access-Control-Allow-Origin line added:app.js
-=======
->>>>>>> parent of 0672461... Access-Control-Allow-Origin line added:app.js
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -60,7 +55,7 @@ io.sockets.on('connection', function (socket) {
 		var id = data.user_id;
 		<!-- update item from db -->
 		db.collection('users', function(err, collection) {
-			collection.update({'_id':new BSON.ObjectID(id)}, {$inc:{rate : 5}} , {safe:true}, function(err, result) {
+			collection.update({'_id':new BSON.ObjectID(id)}, {$inc:{rate : 3}} , {safe:true}, function(err, result) {
 				if (err) {
 					//res.send({'error':'An error has occurred'});
 						console.log(err);
